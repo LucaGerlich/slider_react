@@ -21,6 +21,7 @@ function Card() {
         onChange={(sliderValue) => {
           setSliderValue(sliderValue);
         }}
+        steps={5}
       ></Slider>
       <div className="switch">
         <span className="month-billing">Monthly Billing</span>
