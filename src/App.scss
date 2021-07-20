@@ -1,0 +1,54 @@
+/*Priamary color*/
+$Soft-Cyan-FullSliderBar: hsl(174, 77%, 80%);
+$Strong-Cyan-SliderBackround: hsl(174, 86%, 45%);
+$Light-Grayish-Red-DiscountBackground: hsl(14, 92%, 95%);
+$Light-Red-DiscountText: hsl(15, 100%, 70%);
+$Pale-Blue-CTAText: hsl(226, 100%, 87%);
+
+/*Neutral color*/
+$White-PricingComponentBackground: hsl (0, 0%, 100%);
+$Very-Pale-Blue-MainBackground: hsl(230, 100%, 99%);
+$Light-Grayish-Blue-EmptySliderBar: hsl(224, 65%, 95%);
+$Light-Grayish-Blue-ToggleBackground: hsl(223, 50%, 87%);
+$Grayish-Blue-Text: hsl(225, 20%, 60%);
+$Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
+
+.App-header {
+  font-family: Manrope;
+  padding: 50px 0;
+  text-align: center;
+  background-image: url(./assets/pattern-circles.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .header {
+    color: $Dark-Desaturated-Blue-TextAndCTABackground;
+    margin: 10px;
+  }
+
+  .subheader {
+    font-size: 18px;
+    font-weight: normal;
+    color: $Grayish-Blue-Text;
+    margin: 5px;
+  }
+}
+
+.App {
+  font-family: Manrope;
+  background-image: url(assets/bg-pattern.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: $Very-Pale-Blue-MainBackground;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}

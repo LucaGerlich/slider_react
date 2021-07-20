@@ -1,0 +1,69 @@
+/*Priamary color*/
+$Soft-Cyan-FullSliderBar: hsl(174, 77%, 80%);
+$Strong-Cyan-SliderBackround: hsl(174, 86%, 45%);
+$Light-Grayish-Red-DiscountBackground: hsl(14, 92%, 95%);
+$Light-Red-DiscountText: hsl(15, 100%, 70%);
+$Pale-Blue-CTAText: hsl(226, 100%, 87%);
+
+/*Neutral color*/
+$White-PricingComponentBackground: hsl (0, 0%, 100%);
+$Very-Pale-Blue-MainBackground: hsl(230, 100%, 99%);
+$Light-Grayish-Blue-EmptySliderBar: hsl(224, 65%, 95%);
+$Light-Grayish-Blue-ToggleBackground: hsl(223, 50%, 87%);
+$Grayish-Blue-Text: hsl(225, 20%, 60%);
+$Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
+
+.card {
+  display: flexbox;
+  flex-direction: column;
+  width: 750px;
+  height: 450px;
+  border-radius: 25px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
+  background-color: white;
+  color: black;
+
+  .slider {
+    width: auto;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 75px;
+    margin-right: 75px;
+
+    .track {
+      width: 100%;
+      height: 10px;
+      border-radius: 10px;
+      background-color: $Light-Grayish-Blue-EmptySliderBar;
+      overflow: hidden;
+
+      .fill-level {
+        height: 100%;
+        background-color: $Soft-Cyan-FullSliderBar;
+      }
+    }
+
+    .handle {
+      width: 50px;
+      height: 50px;
+      cursor: grab;
+      background-color: $Strong-Cyan-SliderBackround;
+      border-radius: 50%;
+      // transform: translateY(-50%);
+      position: absolute;
+      top: 0;
+      left: -25px;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+}
