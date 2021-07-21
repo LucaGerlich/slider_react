@@ -1,3 +1,6 @@
+$Light-Grayish-Blue-ToggleBackground: hsl(223, 50%, 87%);
+$Strong-Cyan-SliderBackround: hsl(174, 86%, 45%);
+
 .react-toggle {
   touch-action: pan-x;
 
@@ -42,22 +45,22 @@
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  background-color: #4d4d4d;
+  background-color: $Light-Grayish-Blue-ToggleBackground;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #4d4d4d;
+  background-color: $Strong-Cyan-SliderBackround;
 }
 
 .react-toggle--checked .react-toggle-track {
-  background-color: #4d4d4d;
+  background-color: $Light-Grayish-Blue-ToggleBackground;
 }
 
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #4d4d4d;
+  background-color: $Strong-Cyan-SliderBackround;
 }
 
 .react-toggle-track-check {
@@ -110,7 +113,7 @@
   left: 1px;
   width: 22px;
   height: 22px;
-  border: 1px solid #4d4d4d;
+  border: 1px solid $Light-Grayish-Blue-ToggleBackground;
   border-radius: 50%;
   background-color: #fafafa;
 

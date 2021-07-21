@@ -90,6 +90,7 @@ export const Slider = ({ onChange, steps = 0 }) => {
       <div
         className="handle"
         onMouseDown={handleMouseDown}
+        onTouchStart={handleMouseDown}
         ref={handle}
         style={{ transform: `translateX(${positionX}px)` }}
       ></div>

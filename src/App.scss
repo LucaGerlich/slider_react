@@ -15,7 +15,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
 .App-header {
   font-family: Manrope;
-  padding: 50px 0;
+  padding: 100px 0;
   text-align: center;
   background-image: url(./assets/pattern-circles.svg);
   background-position: center;
@@ -51,4 +51,160 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
 .App-link {
   color: #61dafb;
+}
+
+@media (max-width: 375px) {
+  .App-header {
+    font-family: Manrope;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(./assets/pattern-circles.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      margin: 10px;
+      font-size: 130%;
+    }
+
+    .subheader {
+      font-size: 100%;
+      font-weight: normal;
+      color: $Grayish-Blue-Text;
+      margin: 5px;
+    }
+  }
+
+  .App {
+    font-family: Manrope;
+    background-image: url(assets/bg-pattern.svg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: $Very-Pale-Blue-MainBackground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+@media (max-width: 450px) and (min-width: 375px) {
+  .App-header {
+    font-family: Manrope;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(./assets/pattern-circles.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      margin: 10px;
+      font-size: 130%;
+    }
+
+    .subheader {
+      font-size: 100%;
+      font-weight: normal;
+      color: $Grayish-Blue-Text;
+      margin: 5px;
+    }
+  }
+
+  .App {
+    font-family: Manrope;
+    background-image: url(assets/bg-pattern.svg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: $Very-Pale-Blue-MainBackground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+@media (max-width: 750px) and (min-width: 451px) {
+  .App-header {
+    font-family: Manrope;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(./assets/pattern-circles.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      margin: 10px;
+      font-size: 130%;
+    }
+
+    .subheader {
+      font-size: 100%;
+      font-weight: normal;
+      color: $Grayish-Blue-Text;
+      margin: 5px;
+    }
+  }
+
+  .App {
+    font-family: Manrope;
+    background-image: url(assets/bg-pattern.svg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: $Very-Pale-Blue-MainBackground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+@media (max-width: 850px) and (min-width: 751px) {
+  .App-header {
+    font-family: Manrope;
+    padding: 50px 0;
+    text-align: center;
+    background-image: url(./assets/pattern-circles.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .header {
+      color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      margin: 10px;
+      font-size: 130%;
+    }
+
+    .subheader {
+      font-size: 100%;
+      font-weight: normal;
+      color: $Grayish-Blue-Text;
+      margin: 5px;
+    }
+  }
+
+  .App {
+    font-family: Manrope;
+    background-image: url(assets/bg-pattern.svg);
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-color: $Very-Pale-Blue-MainBackground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
 }

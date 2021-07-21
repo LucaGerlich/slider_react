@@ -4,6 +4,7 @@ $Strong-Cyan-SliderBackround: hsl(174, 86%, 45%);
 $Light-Grayish-Red-DiscountBackground: hsl(14, 100%, 86%);
 $Light-Red-DiscountText: hsl(15, 100%, 70%);
 $Pale-Blue-CTAText: hsl(226, 100%, 87%);
+$Toggle: 203, 208, 239;
 
 /*Neutral color*/
 $White-PricingComponentBackground: hsl (0, 0%, 100%);
@@ -15,122 +16,578 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
-.card {
-  font-family: Manrope;
-  width: 750px;
-  height: 450px;
-  border-radius: 25px;
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
-  background-color: white;
-  color: black;
+@media screen and (min-width: 851px) {
+  .card {
+    font-family: Manrope;
+    font-weight: 600;
+    width: 750px;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
+    color: black;
 
-  .uppertext {
-    color: $Grayish-Blue-Text;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    width: 100%;
-
-    .number {
-      color: $Dark-Desaturated-Blue-TextAndCTABackground;
-      font-weight: 300;
-      font-size: 200%;
-    }
-
-    .month {
-      color: $Dark-Desaturated-Blue-TextAndCTABackground;
-    }
-  }
-
-  .slider {
-    width: auto;
-    position: relative;
-    height: 50px;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 75px;
-    margin-right: 75px;
-
-    .track {
+    .uppertext {
+      color: $Grayish-Blue-Text;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 30px;
       width: 100%;
-      height: 10px;
-      border-radius: 10px;
-      background-color: $Light-Grayish-Blue-EmptySliderBar;
-      overflow: hidden;
 
-      .fill-level {
-        height: 100%;
-        background-color: $Soft-Cyan-FullSliderBar;
+      .number {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        font-weight: 300;
+        font-size: 200%;
+      }
+
+      .month {
+        color: $Grayish-Blue-Text;
       }
     }
 
-    .handle {
-      width: 50px;
+    .slider {
+      width: auto;
+      position: relative;
       height: 50px;
-      cursor: grab;
-      background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 50%;
-      // transform: translateY(-50%);
-      position: absolute;
-      top: 0;
-      left: -25px;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 75px;
+      margin-right: 75px;
 
-      &:active {
-        cursor: grabbing;
+      .track {
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $Light-Grayish-Blue-EmptySliderBar;
+        overflow: hidden;
+
+        .fill-level {
+          height: 100%;
+          background-color: $Soft-Cyan-FullSliderBar;
+        }
+      }
+
+      .handle {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: -25px;
+        box-shadow: 0px 10px 20px 1px $Strong-Cyan-SliderBackround;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      color: $Grayish-Blue-Text;
+
+      .month-billing {
+        font-size: 75%;
+        margin-right: 10px;
+      }
+
+      .year-billing {
+        font-size: 75%;
+        margin-left: 10px;
+      }
+
+      .discountbox {
+        color: $Light-Grayish-Red-DiscountBackground;
+        width: 130px;
+        height: 10px;
+        border-radius: 10px;
+
+        .discount {
+          font-size: 50%;
+          margin-left: 25px;
+          color: $Light-Red-DiscountText;
+        }
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: medium;
+
+      button {
+        font-family: Manrope;
+        font-weight: 600;
+        background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        padding: 15px 10%;
+        border: none;
+        border-radius: 300px;
+        color: $Pale-Blue-CTAText;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+      }
+
+      .list {
+        color: $Grayish-Blue-Text;
+        list-style: none;
+
+        svg {
+          margin-right: 20px;
+        }
       }
     }
   }
+}
 
-  .switch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+@media (max-width: 375px) {
+  .card {
+    font-family: Manrope;
+    width: 80%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
+    color: black;
 
-    .month-billing {
-      font-size: 75%;
-      margin-right: 10px;
+    .uppertext {
+      color: $Grayish-Blue-Text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      width: 100%;
+
+      .number {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        font-weight: 300;
+        font-size: 200%;
+      }
+
+      .month {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      }
     }
 
-    .year-billing {
-      font-size: 75%;
-      margin-left: 10px;
+    .slider {
+      width: auto;
+      position: relative;
+      height: 50px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 75px;
+      margin-right: 75px;
+
+      .track {
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $Light-Grayish-Blue-EmptySliderBar;
+        overflow: hidden;
+
+        .fill-level {
+          height: 100%;
+          background-color: $Soft-Cyan-FullSliderBar;
+        }
+      }
+
+      .handle {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: -25px;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
     }
 
-    .discountbox {
-      color: $Light-Grayish-Red-DiscountBackground;
-      width: 120px;
-      height: 10px;
-      border-radius: 10px;
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
 
-      .discount {
-        font-size: 50%;
-        margin-left: 25px;
-        color: $Light-Red-DiscountText;
+      .month-billing {
+        font-size: 75%;
+        margin-right: 10px;
+      }
+
+      .year-billing {
+        font-size: 75%;
+        margin-left: 10px;
+      }
+
+      .discountbox {
+        color: $Light-Grayish-Red-DiscountBackground;
+        width: 130px;
+        height: 10px;
+        border-radius: 10px;
+
+        .discount {
+          font-size: 50%;
+          margin-left: 25px;
+          color: $Light-Red-DiscountText;
+        }
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: medium;
+
+      button {
+        font-weight: 600;
+        background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        padding: 15px 10%;
+        border: none;
+        border-radius: 300px;
+        color: $Pale-Blue-CTAText;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+      }
+
+      .list {
+        color: $Grayish-Blue-Text;
+        list-style: none;
+
+        svg {
+          margin-right: 20px;
+        }
       }
     }
   }
+}
 
-  .features {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: medium;
+@media (max-width: 450px) and (min-width: 376px) {
+  .card {
+    font-family: Manrope;
+    width: 80%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
+    color: black;
 
-    .spacer {
+    .uppertext {
+      color: $Grayish-Blue-Text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      width: 100%;
+
+      .number {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        font-weight: 300;
+        font-size: 200%;
+      }
+
+      .month {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      }
     }
 
-    .list {
+    .slider {
+      width: auto;
+      position: relative;
+      height: 50px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 75px;
+      margin-right: 75px;
+
+      .track {
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $Light-Grayish-Blue-EmptySliderBar;
+        overflow: hidden;
+
+        .fill-level {
+          height: 100%;
+          background-color: $Soft-Cyan-FullSliderBar;
+        }
+      }
+
+      .handle {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: -25px;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+
+      .month-billing {
+        font-size: 75%;
+        margin-right: 10px;
+      }
+
+      .year-billing {
+        font-size: 75%;
+        margin-left: 10px;
+      }
+
+      .discountbox {
+        color: $Light-Grayish-Red-DiscountBackground;
+        width: 130px;
+        height: 10px;
+        border-radius: 10px;
+
+        .discount {
+          font-size: 50%;
+          margin-left: 25px;
+          color: $Light-Red-DiscountText;
+        }
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: medium;
+
+      button {
+        font-weight: 600;
+        background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        padding: 15px 10%;
+        border: none;
+        border-radius: 300px;
+        color: $Pale-Blue-CTAText;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+      }
+
+      .list {
+        color: $Grayish-Blue-Text;
+        list-style: none;
+
+        svg {
+          margin-right: 20px;
+        }
+      }
     }
   }
-  .button {
+}
+
+@media (max-width: 850px) and (min-width: 451px) {
+  .card {
+    font-family: Manrope;
+    width: 80%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
+    color: black;
+
+    .uppertext {
+      color: $Grayish-Blue-Text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      width: 100%;
+
+      .number {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        font-weight: 300;
+        font-size: 200%;
+      }
+
+      .month {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      }
+    }
+
+    .slider {
+      width: auto;
+      position: relative;
+      height: 50px;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 75px;
+      margin-right: 75px;
+
+      .track {
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $Light-Grayish-Blue-EmptySliderBar;
+        overflow: hidden;
+
+        .fill-level {
+          height: 100%;
+          background-color: $Soft-Cyan-FullSliderBar;
+        }
+      }
+
+      .handle {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: -25px;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+
+    .switch {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 95%;
+
+      .month-billing {
+        font-size: 75%;
+        margin-right: 10px;
+      }
+
+      .year-billing {
+        font-size: 75%;
+        margin-left: 10px;
+      }
+
+      .discountbox {
+        color: $Light-Grayish-Red-DiscountBackground;
+        width: 130px;
+        height: 10px;
+        border-radius: 10px;
+
+        .discount {
+          font-size: 50%;
+          margin-left: 25px;
+          color: $Light-Red-DiscountText;
+        }
+      }
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: medium;
+
+      button {
+        font-weight: 600;
+        background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        padding: 15px 10%;
+        border: none;
+        border-radius: 300px;
+        color: $Pale-Blue-CTAText;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+      }
+
+      .list {
+        color: $Grayish-Blue-Text;
+        list-style: none;
+
+        svg {
+          margin-right: 20px;
+        }
+      }
+    }
   }
 }
