@@ -1,5 +1,6 @@
 import React from "react";
 import Toggle from "react-toggle";
+import ToggleTech from "./ToggleTech";
 import { useState } from "react";
 import { Slider } from "./Slider";
 import Slidernew from "./Slidernew";
@@ -9,33 +10,64 @@ import "../assets/icon-check.svg";
 import "../components/Toggle.scss";
 import "./Card.scss";
 
+const prices = [
+  {
+    pageViews: "10K",
+    price: 8,
+  },
+  {
+    pageViews: "50K",
+    price: 12,
+  },
+  {
+    pageViews: "100K",
+    price: 16,
+  },
+  {
+    pageViews: "500K",
+    price: 24,
+  },
+  {
+    pageViews: "1M",
+    price: 36,
+  },
+];
+function setPrice() {
+  console.log(prices);
+}
+
 function Card() {
   const [sliderValue, setSliderValue] = useState(0);
+  const [toggleBool, setToggleBool] = useState(false);
+
+  console.log(toggleBool, setToggleBool);
   return (
     <div className="card">
       <div className="uppertext">
-        <div className="price">
-          <span className="number">${Math.round(8 + 28 * sliderValue)}</span>
-          <span className="month"> /month</span>
-        </div>
         <div className="pageviews">
           <span className="views_number">
-            {Math.round(10 + 200 * sliderValue)}K
+            {prices[sliderValue * (prices.length - 1)].pageViews}
           </span>
-          <span className="views_text"> pageviews</span>
+          <span className="views_text"> PAGEVIEWS</span>
+        </div>
+        <div className="price">
+          <span className="number">
+            ${prices[sliderValue * (prices.length - 1)].price}.00
+          </span>
+          <span className="month"> / month</span>
         </div>
       </div>
       <Slider
         onChange={(sliderValue) => {
           setSliderValue(sliderValue);
         }}
-        steps={5}
+        steps={prices.length - 1}
       ></Slider>
       <div className="switch">
         <span className="month-billing">Monthly Billing</span>
         <div className="switchbutton">
           <label>
-            <Toggle defaultChecked={true} icons={false} onChange={false} />
+            <ToggleTech></ToggleTech>
           </label>
         </div>
         <span className="year-billing">Yearly Billing</span>
@@ -43,7 +75,7 @@ function Card() {
       <div className="spacer"></div>
       <div className="features">
         <div className="list">
-          <ul className="list">
+          <ul className="list-items">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8">
                 <path
