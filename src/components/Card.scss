@@ -21,7 +21,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     font-family: Manrope;
     font-weight: 600;
     padding: 50px 50px 30px 30px;
-    width: 750px;
+    width: 600px;
     height: 400px;
     border-radius: 15px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 5px 5px 20px 0 rgba(0, 0, 0, 0.09);
@@ -45,8 +45,8 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       .price {
         display: flex;
         align-items: center;
-
         order: 1;
+
         .number {
           color: $Dark-Desaturated-Blue-TextAndCTABackground;
           font-weight: 800;
@@ -499,33 +499,58 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 @media (max-width: 850px) and (min-width: 451px) {
   .card {
     font-family: Manrope;
-    width: 80%;
-    height: 500px;
-    border-radius: 25px;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 20px 20px 20px 0 rgba(0, 0, 0, 0.09);
-    background-color: white;
+    font-weight: 600;
+    padding: 50px 50px 30px 30px;
+    width: 70%;
+    height: 70%;
+    border-radius: 15px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 5px 5px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: pink;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .uppertext {
+      margin: 10px;
       color: $Grayish-Blue-Text;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-evenly;
       margin-top: 30px;
       width: 100%;
+      align-items: center;
 
-      .number {
-        color: $Dark-Desaturated-Blue-TextAndCTABackground;
-        font-weight: 300;
-        font-size: 200%;
+      .price {
+        display: flex;
+        align-items: center;
+        order: 1;
+
+        .number {
+          color: $Dark-Desaturated-Blue-TextAndCTABackground;
+          font-weight: 800;
+          font-size: 170%;
+        }
+
+        .month {
+          margin-left: 10px;
+          font-size: 22px;
+          color: $Grayish-Blue-Text;
+        }
       }
 
-      .month {
-        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      .pageviews {
+        font-weight: 800;
+        letter-spacing: 3px;
+        font-style: unset;
+        order: 1;
+        font-size: 18px;
       }
     }
 
     .slider {
+      order: 2;
       width: auto;
       position: relative;
       height: 50px;
@@ -564,6 +589,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
         position: absolute;
         top: 0;
         left: -25px;
+        box-shadow: 0px 10px 20px 1px $Strong-Cyan-SliderBackround;
 
         &:active {
           cursor: grabbing;
@@ -572,10 +598,15 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     }
 
     .switch {
+      margin: 20px;
+      order: 3;
       display: flex;
       flex-direction: row;
       justify-content: center;
-      width: 95%;
+      font-weight: 600;
+      font-size: 20px;
+      width: 100%;
+      color: $Grayish-Blue-Text;
 
       .month-billing {
         font-size: 75%;
@@ -602,22 +633,29 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     }
 
     .features {
+      order: 4;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       font-size: medium;
+      font-weight: 800;
+      width: 80%;
 
       button {
-        font-weight: 600;
+        font-family: Manrope;
+        font-weight: 800;
         background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
         padding: 15px 10%;
         border: none;
+        width: 175px;
         border-radius: 300px;
         color: $Pale-Blue-CTAText;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
 
         &:hover {
           cursor: pointer;
@@ -630,9 +668,17 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       .list {
         color: $Grayish-Blue-Text;
         list-style: none;
+        text-align: left;
 
-        svg {
-          margin-right: 20px;
+        li {
+          list-style: none;
+          margin-top: 5px;
+          margin-bottom: 5px;
+
+          svg {
+            margin-right: 20px;
+            size: 1px;
+          }
         }
       }
     }
