@@ -4,8 +4,6 @@ import { Slider } from "./Slider";
 import Button from "./Button";
 import Switch from "./Switch";
 import "../assets/icon-check.svg";
-
-import "../components/Toggle.scss";
 import "./Card.scss";
 
 const prices = [
@@ -47,7 +45,10 @@ function Card() {
         </div>
         <div className="price">
           <span className="number">
-            {isToggled ? prices[sliderValue * (prices.length - 1)].price*0.75 + ".00" : prices[sliderValue * (prices.length - 1)].price + ".00"}
+            $
+            {isToggled
+              ? prices[sliderValue * (prices.length - 1)].price * 0.75 + ".00"
+              : prices[sliderValue * (prices.length - 1)].price + ".00"}
           </span>
           <span className="month"> / month</span>
         </div>
@@ -62,7 +63,10 @@ function Card() {
         <span className="month-billing">Monthly Billing</span>
         <div className="switchbutton">
           <label>
-            <Switch isToggled={isToggled} onToggle={()=> setIsToggled(!isToggled)}/>
+            <Switch
+              isToggled={isToggled}
+              onToggle={() => setIsToggled(!isToggled)}
+            />
           </label>
         </div>
         <span className="year-billing">Yearly Billing</span>

@@ -11,6 +11,9 @@
 # production
 /build
 
+#Data
+/FrontendMentor
+
 # misc
 .DS_Store
 .env.local

@@ -124,10 +124,64 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
       font-weight: 600;
       font-size: 20px;
       width: 100%;
       color: $Grayish-Blue-Text;
+
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggleslider {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .toggleslider:before {
+        border-radius: 34px;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .toggleslider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .toggleslider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .toggleslider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
 
       .month-billing {
         font-size: 75%;
@@ -290,6 +344,59 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       justify-content: center;
       width: 100%;
 
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggleslider {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .toggleslider:before {
+        border-radius: 34px;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .toggleslider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .toggleslider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .toggleslider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
       .month-billing {
         font-size: 75%;
         margin-right: 10px;
@@ -355,6 +462,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 @media (max-width: 450px) and (min-width: 376px) {
   .card {
     font-family: Manrope;
+    font-weight: 600;
     width: 80%;
     height: 500px;
     border-radius: 25px;
@@ -369,6 +477,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       justify-content: space-evenly;
       margin-top: 30px;
       width: 100%;
+      align-items: center;
 
       .number {
         color: $Dark-Desaturated-Blue-TextAndCTABackground;
@@ -434,6 +543,59 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       justify-content: center;
       width: 100%;
 
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggleslider {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .toggleslider:before {
+        border-radius: 34px;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .toggleslider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .toggleslider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .toggleslider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
       .month-billing {
         font-size: 75%;
         margin-right: 10px;
@@ -459,22 +621,29 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     }
 
     .features {
+      order: 4;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       font-size: medium;
+      font-weight: 800;
+      width: 80%;
 
       button {
-        font-weight: 600;
+        font-family: Manrope;
+        font-weight: 800;
         background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
         padding: 15px 10%;
         border: none;
+        width: 175px;
         border-radius: 300px;
         color: $Pale-Blue-CTAText;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
 
         &:hover {
           cursor: pointer;
@@ -496,7 +665,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
   }
 }
 
-@media (max-width: 850px) and (min-width: 451px) {
+@media (max-width: 650px) and (min-width: 451px) {
   .card {
     font-family: Manrope;
     font-weight: 600;
@@ -505,7 +674,224 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     height: 70%;
     border-radius: 15px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 5px 5px 20px 0 rgba(0, 0, 0, 0.09);
-    background-color: pink;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .uppertext {
+      color: $Grayish-Blue-Text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      width: 100%;
+      order: 1;
+
+      .number {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        font-weight: 300;
+        font-size: 200%;
+      }
+
+      .month {
+        color: $Dark-Desaturated-Blue-TextAndCTABackground;
+      }
+    }
+
+    .slider {
+      order: 2;
+      width: auto;
+      position: relative;
+      height: 50px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      margin-left: 75px;
+      margin-right: 75px;
+
+      .track {
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: $Light-Grayish-Blue-EmptySliderBar;
+        overflow: hidden;
+
+        .fill-level {
+          height: 100%;
+          background-color: $Soft-Cyan-FullSliderBar;
+        }
+      }
+
+      .handle {
+        width: 50px;
+        height: 50px;
+        cursor: grab;
+        background: $Strong-Cyan-SliderBackround url(../assets/icon-slider.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        // transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        left: -25px;
+
+        &:active {
+          cursor: grabbing;
+        }
+      }
+    }
+
+    .switch {
+      margin: 20px;
+      order: 3;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 20px;
+      width: 100%;
+      color: $Grayish-Blue-Text;
+
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggleslider {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .toggleslider:before {
+        border-radius: 34px;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .toggleslider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .toggleslider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .toggleslider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      .month-billing {
+        font-size: 75%;
+        margin-right: 10px;
+      }
+
+      .year-billing {
+        font-size: 75%;
+        margin-left: 10px;
+      }
+
+      .discountbox {
+        color: $Light-Grayish-Red-DiscountBackground;
+        width: 130px;
+        height: 10px;
+        border-radius: 10px;
+
+        .discount {
+          font-size: 50%;
+          margin-left: 25px;
+          color: $Light-Red-DiscountText;
+        }
+      }
+    }
+
+    .features {
+      order: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      font-size: medium;
+      font-weight: 800;
+      width: 80%;
+
+      .list {
+        color: $Grayish-Blue-Text;
+        list-style: none;
+        text-align: left;
+
+        svg {
+          margin-right: 20px;
+        }
+      }
+
+      button {
+        font-family: Manrope;
+        font-weight: 800;
+        background-color: $Dark-Desaturated-Blue-TextAndCTABackground;
+        padding: 15px 10%;
+        border: none;
+        width: 175px;
+        border-radius: 300px;
+        color: $Pale-Blue-CTAText;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .spacer {
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) and (min-width: 651px) {
+  .card {
+    font-family: Manrope;
+    font-weight: 600;
+    padding: 50px 50px 30px 30px;
+    width: 70%;
+    height: 70%;
+    border-radius: 15px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 5px 5px 20px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
     color: black;
     display: flex;
     flex-direction: column;
@@ -603,10 +989,64 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       display: flex;
       flex-direction: row;
       justify-content: center;
+      align-items: center;
       font-weight: 600;
       font-size: 20px;
       width: 100%;
       color: $Grayish-Blue-Text;
+
+      .toggle {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .toggleslider {
+        border-radius: 34px;
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .toggleslider:before {
+        border-radius: 34px;
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .toggleslider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .toggleslider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .toggleslider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
 
       .month-billing {
         font-size: 75%;
@@ -635,7 +1075,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
     .features {
       order: 4;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       justify-content: space-between;
       align-items: center;
