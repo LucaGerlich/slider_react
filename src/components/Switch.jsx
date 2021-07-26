@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import React from 'react';
 
-export class Switch extends Component {
-  render() {
-    return <div></div>;
-  }
+const Switch = ({isToggled, onToggle}) => {
+ 
+    return (
+        <label>
+            <input type="checkbox" checked={isToggled} onChange={onToggle} className="Toggle"/>
+            <span/>
+        </label>
+    )
 }
 
 export default Switch;

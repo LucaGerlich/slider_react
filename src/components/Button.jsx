@@ -3,7 +3,7 @@ import React from "react";
 export default function Button() {
   const handleButtonClick = (event) => {
     event.preventDefault();
-    alert("Clam down it's just a sample");
+    console.log("Button was pressed!!!")
   };
 
   return (

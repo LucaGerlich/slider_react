@@ -1,10 +1,8 @@
 import React from "react";
-import Toggle from "react-toggle";
-import ToggleTech from "./ToggleTech";
 import { useState } from "react";
 import { Slider } from "./Slider";
-import Slidernew from "./Slidernew";
 import Button from "./Button";
+import Switch from "./Switch";
 import "../assets/icon-check.svg";
 
 import "../components/Toggle.scss";
@@ -32,15 +30,12 @@ const prices = [
     price: 36,
   },
 ];
-function setPrice() {
-  console.log(prices);
-}
 
 function Card() {
   const [sliderValue, setSliderValue] = useState(0);
-  const [toggleBool, setToggleBool] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
+  console.log(isToggled);
 
-  console.log(toggleBool, setToggleBool);
   return (
     <div className="card">
       <div className="uppertext">
@@ -52,7 +47,7 @@ function Card() {
         </div>
         <div className="price">
           <span className="number">
-            ${prices[sliderValue * (prices.length - 1)].price}.00
+            {isToggled ? prices[sliderValue * (prices.length - 1)].price*0.75 + ".00" : prices[sliderValue * (prices.length - 1)].price + ".00"}
           </span>
           <span className="month"> / month</span>
         </div>
@@ -67,7 +62,7 @@ function Card() {
         <span className="month-billing">Monthly Billing</span>
         <div className="switchbutton">
           <label>
-            <ToggleTech></ToggleTech>
+            <Switch isToggled={isToggled} onToggle={()=> setIsToggled(!isToggled)}/>
           </label>
         </div>
         <span className="year-billing">Yearly Billing</span>
@@ -81,7 +76,7 @@ function Card() {
                 <path
                   fill="none"
                   stroke="#10D8C4"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M1 4.134l1.907 1.908L7.949 1"
                 />
               </svg>{" "}
@@ -92,7 +87,7 @@ function Card() {
                 <path
                   fill="none"
                   stroke="#10D8C4"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M1 4.134l1.907 1.908L7.949 1"
                 />
               </svg>{" "}
@@ -103,7 +98,7 @@ function Card() {
                 <path
                   fill="none"
                   stroke="#10D8C4"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d="M1 4.134l1.907 1.908L7.949 1"
                 />
               </svg>{" "}
