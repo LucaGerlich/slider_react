@@ -6,7 +6,7 @@ const Switch = ({ isToggled, onToggle }) => {
     <div>
       <label className="toggle">
         <input type="checkbox" checked={isToggled} onChange={onToggle} />
-        <span class="toggleslider"></span>
+        <span className="toggleslider"></span>
       </label>
     </div>
   );

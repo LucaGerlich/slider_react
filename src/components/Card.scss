@@ -16,6 +16,11 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
 @media screen and (min-width: 851px) {
   .card {
     font-family: Manrope;
@@ -186,25 +191,35 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       .month-billing {
         font-size: 75%;
         margin-right: 10px;
+        flex-grow: 2;
+        text-align: right;
+        flex-basis: 50%;
+      }
+
+      .switchbutton {
+        flex-grow: 0;
       }
 
       .year-billing {
         font-size: 75%;
         margin-left: 10px;
+        flex-grow: 2;
+        text-align: left;
+        flex-basis: 50%;
       }
 
       .discount {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         position: relative;
         color: $Light-Grayish-Red-DiscountBackground;
         margin-left: 10px;
-        width: 130px;
         border-radius: 10px;
 
         .discount-text {
           display: inline;
           align-items: center;
-          font-size: 50%;
+          font-size: 80%;
           color: $Light-Red-DiscountText;
         }
 
@@ -477,7 +492,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
   }
 }
 
-@media (max-width: 450px) and (min-width: 376px) {
+@media (max-width: 500px) and (min-width: 376px) {
   .card {
     font-family: Manrope;
     font-weight: 600;
@@ -633,16 +648,12 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
       .discount {
         display: none;
-        color: $Light-Grayish-Red-DiscountBackground;
-        width: 130px;
-        height: 10px;
-        border-radius: 10px;
-
-        .discount-text {
-          font-size: 50%;
-          margin-left: 25px;
-          color: $Light-Red-DiscountText;
-        }
+      }
+      .discount-text {
+        display: none;
+      }
+      .discount-text-small {
+        display: none;
       }
     }
 
@@ -690,7 +701,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
   }
 }
 
-@media (max-width: 650px) and (min-width: 451px) {
+@media (max-width: 650px) and (min-width: 501px) {
   .card {
     font-family: Manrope;
     font-weight: 600;
@@ -738,7 +749,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
         font-weight: 800;
         letter-spacing: 3px;
         font-style: unset;
-        order: 1;
+        order: 3;
         font-size: 18px;
       }
     }
@@ -792,7 +803,7 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
 
     .switch {
       margin: 20px;
-      order: 3;
+      order: 4;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -858,39 +869,46 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       .month-billing {
         font-size: 75%;
         margin-right: 10px;
+        flex-grow: 2;
+        text-align: right;
+        flex-basis: 50%;
+      }
+
+      .switchbutton {
+        flex-grow: 0;
       }
 
       .year-billing {
         font-size: 75%;
         margin-left: 10px;
+        flex-grow: 2;
+        text-align: left;
+        flex-basis: 50%;
       }
 
       .discount {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         position: relative;
         color: $Light-Grayish-Red-DiscountBackground;
         margin-left: 10px;
-        width: 130px;
         border-radius: 10px;
 
         .discount-text {
           display: none;
-          align-items: center;
-          font-size: 50%;
-          color: $Light-Red-DiscountText;
         }
 
         .discount-text-small {
+          display: inline;
           align-items: center;
-          font-size: 50%;
-          margin-left: 5px;
+          font-size: 80%;
           color: $Light-Red-DiscountText;
         }
       }
     }
 
     .features {
-      order: 4;
+      order: 5;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1100,32 +1118,39 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       .month-billing {
         font-size: 75%;
         margin-right: 10px;
+        flex-grow: 2;
+        text-align: right;
+        flex-basis: 50%;
+      }
+
+      .switchbutton {
+        flex-grow: 0;
       }
 
       .year-billing {
         font-size: 75%;
         margin-left: 10px;
+        flex-grow: 2;
+        text-align: left;
+        flex-basis: 50%;
       }
 
       .discount {
-        display: flex;
+        display: inline-flex;
+        align-items: center;
         position: relative;
         color: $Light-Grayish-Red-DiscountBackground;
         margin-left: 10px;
-        width: 130px;
         border-radius: 10px;
 
         .discount-text {
           display: none;
-          align-items: center;
-          font-size: 50%;
-          color: $Light-Red-DiscountText;
         }
 
         .discount-text-small {
+          display: inline;
           align-items: center;
-          font-size: 50%;
-          margin-left: 5px;
+          font-size: 80%;
           color: $Light-Red-DiscountText;
         }
       }

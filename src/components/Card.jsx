@@ -60,7 +60,7 @@ function Card() {
         steps={prices.length - 1}
       ></Slider>
       <div className="switch">
-        <span className="month-billing">Monthly Billing</span>
+        <div className="month-billing">Monthly Billing</div>
         <div className="switchbutton">
           <label>
             <Switch
@@ -69,10 +69,12 @@ function Card() {
             />
           </label>
         </div>
-        <span className="year-billing">Yearly Billing</span>
-        <div className="discount">
-          <span className="discount-text">25% discount</span>
-          <span className="discount-text-small">-25%</span>
+        <div className="year-billing">
+          Yearly Billing
+          <span className="discount">
+            <span className="discount-text">25% discount</span>
+            <span className="discount-text-small">-25%</span>
+          </span>
         </div>
       </div>
       <div className="spacer"></div>
