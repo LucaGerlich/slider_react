@@ -72,6 +72,7 @@ function Card() {
         <span className="year-billing">Yearly Billing</span>
         <div className="discount">
           <span className="discount-text">25% discount</span>
+          <span className="discount-text-small">-25%</span>
         </div>
       </div>
       <div className="spacer"></div>
