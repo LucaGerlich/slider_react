@@ -45,6 +45,7 @@ export const Slider = ({ onChange, steps = 0 }) => {
   //!!!TOUCH
   const handleTouchMove = useCallback(
     (e) => {
+      e.preventDefault();
       console.log("TOUCHMOVE");
 
       sliderData.current.move.x = e.changedTouches[0].clientX;
@@ -126,12 +127,14 @@ export const Slider = ({ onChange, steps = 0 }) => {
   //!!!TOUCH
   const handleTouchStart = useCallback(
     (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       console.log(e);
       console.log("TOUCH START");
       sliderData.current.start.x = e.changedTouches[0].clientX;
       sliderData.current.start.y = e.changedTouches[0].clientY;
 
-      window.addEventListener("touchmove", handleTouchMove);
+      window.addEventListener("touchmove", handleTouchMove, { passive: true });
       window.addEventListener("touchend", handleTouchDragEnd);
       window.addEventListener("touchcancel", handleTouchDragEnd);
     },
