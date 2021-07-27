@@ -164,17 +164,21 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
         width: 26px;
         left: 4px;
         bottom: 4px;
+        height: 16px;
+        width: 16px;
+        left: 2px;
+        bottom: 2px;
         background-color: white;
         -webkit-transition: 0.4s;
         transition: 0.4s;
       }
 
       input:checked + .toggleslider {
-        background-color: #2196f3;
+        background-color: $Strong-Cyan-SliderBackround;
       }
 
       input:focus + .toggleslider {
-        box-shadow: 0 0 1px #2196f3;
+        box-shadow: 0 0 1px $Strong-Cyan-SliderBackround;
       }
 
       input:checked + .toggleslider:before {
@@ -193,15 +197,18 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
         margin-left: 10px;
       }
 
-      .discountbox {
+      .discount {
+        display: flex;
+        position: relative;
         color: $Light-Grayish-Red-DiscountBackground;
+        margin-left: 10px;
         width: 130px;
-        height: 10px;
         border-radius: 10px;
 
-        .discount {
+        .discount-text {
+          display: inline;
+          align-items: center;
           font-size: 50%;
-          margin-left: 25px;
           color: $Light-Red-DiscountText;
         }
       }
@@ -583,11 +590,11 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
       }
 
       input:checked + .toggleslider {
-        background-color: #2196f3;
+        background-color: $Strong-Cyan-SliderBackround;
       }
 
       input:focus + .toggleslider {
-        box-shadow: 0 0 1px #2196f3;
+        box-shadow: 0 0 1px $Strong-Cyan-SliderBackround;
       }
 
       input:checked + .toggleslider:before {

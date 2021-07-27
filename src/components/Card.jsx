@@ -70,6 +70,9 @@ function Card() {
           </label>
         </div>
         <span className="year-billing">Yearly Billing</span>
+        <div className="discount">
+          <span className="discount-text">25% discount</span>
+        </div>
       </div>
       <div className="spacer"></div>
       <div className="features">
