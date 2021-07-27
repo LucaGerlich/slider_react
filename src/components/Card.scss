@@ -164,10 +164,6 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
         width: 26px;
         left: 4px;
         bottom: 4px;
-        height: 16px;
-        width: 16px;
-        left: 2px;
-        bottom: 2px;
         background-color: white;
         -webkit-transition: 0.4s;
         transition: 0.4s;
@@ -210,6 +206,10 @@ $Dark-Desaturated-Blue-TextAndCTABackground: hsl(227, 35%, 25%);
           align-items: center;
           font-size: 50%;
           color: $Light-Red-DiscountText;
+        }
+
+        .discount-text-small {
+          display: none;
         }
       }
     }
