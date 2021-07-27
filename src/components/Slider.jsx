@@ -42,6 +42,26 @@ export const Slider = ({ onChange, steps = 0 }) => {
     [positionX]
   );
 
+  //!!!TOUCH
+  const handleTouchMove = useCallback(
+    (e) => {
+      console.log("TOUCHMOVE");
+
+      sliderData.current.move.x = e.changedTouches[0].clientX;
+      sliderData.current.move.y = e.changedTouches[0].clientY;
+      const movement = Math.max(
+        0,
+        Math.min(
+          track.current.offsetWidth,
+          positionX + sliderData.current.move.x - sliderData.current.start.x
+        )
+      );
+      handle.current.style.transform = `translateX(${movement}px)`;
+      fillLevelRef.current.style.width = `${movement}px`;
+    },
+    [positionX]
+  );
+
   const handleDragEnd = useCallback(() => {
     window.removeEventListener("mousemove", handleMove);
     window.removeEventListener("mouseup", handleDragEnd);
@@ -63,8 +83,33 @@ export const Slider = ({ onChange, steps = 0 }) => {
       setPositionX(newPos);
     }
 
-    console.log("END");
+    console.log("TOUCHEND");
   }, [handleMove, positionX, steps]);
+
+  //!!!TOUCH
+  const handleTouchDragEnd = useCallback(() => {
+    window.removeEventListener("touchmove", handleTouchMove);
+    window.removeEventListener("touchend", handleTouchDragEnd);
+
+    const newPos = Math.max(
+      0,
+      Math.min(
+        track.current.offsetWidth,
+        positionX + sliderData.current.move.x - sliderData.current.start.x
+      )
+    );
+
+    if (steps !== 0) {
+      const relVal = newPos / track.current.offsetWidth;
+      const target = Math.round(relVal / (1 / steps));
+
+      setPositionX(track.current.offsetWidth * ((target * 1) / steps));
+    } else {
+      setPositionX(newPos);
+    }
+
+    console.log("END");
+  }, [handleTouchMove, positionX, steps]);
 
   const handleMouseDown = useCallback(
     (e) => {
@@ -76,6 +121,21 @@ export const Slider = ({ onChange, steps = 0 }) => {
       window.addEventListener("mouseup", handleDragEnd);
     },
     [handleMove, handleDragEnd]
+  );
+
+  //!!!TOUCH
+  const handleTouchStart = useCallback(
+    (e) => {
+      console.log(e);
+      console.log("TOUCH START");
+      sliderData.current.start.x = e.changedTouches[0].clientX;
+      sliderData.current.start.y = e.changedTouches[0].clientY;
+
+      window.addEventListener("touchmove", handleTouchMove);
+      window.addEventListener("touchend", handleTouchDragEnd);
+      window.addEventListener("touchcancel", handleTouchDragEnd);
+    },
+    [handleTouchMove, handleTouchDragEnd]
   );
 
   return (
@@ -90,7 +150,7 @@ export const Slider = ({ onChange, steps = 0 }) => {
       <div
         className="handle"
         onMouseDown={handleMouseDown}
-        onTouchStart={handleMouseDown}
+        onTouchStart={handleTouchStart}
         ref={handle}
         style={{ transform: `translateX(${positionX}px)` }}
       ></div>
